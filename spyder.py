@@ -43,20 +43,21 @@ class Spyder():
         return res
 
     def printer(self, classes):
-        print("code",self.code, "year",self.year, "semester", self.semester)
-        tplt = "{:^10}\t{:10}\t{:10}\t{:^10}\t{:10}\t{:10}"
+        output = "{:3}\t{:3}\t{:3}\t{:3}\t{:3}\t{:3}\t\n\n".format("code", self.code, "year",self.year, "semester", self.semester)
+        tplt = "{:^10}\t{:10}\t{:10}\t{:^10}\t{:10}\t{:10}\n"
         title = tplt.format('Class type', 'Date', 'Start', 'End', 'Duration', 'Place')
-        print(title)
-        print("-"*150)
+        output += title + "-"*150 + '\n'
+
         for i in range(len(classes)):
             s = classes[i]
             temp = tplt.format(s[0], s[1], s[2], s[3], s[4], s[5])
-            print(temp)
-            print("-"*145)
+            output += temp + "-"*145 + '\n'
+        
+        return output
     
     def get(self):
         self.setup_target()
-        self.printer(self.whole_class_list())
+        print(self.printer(self.whole_class_list()))
 
     
         
