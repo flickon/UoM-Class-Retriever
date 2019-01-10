@@ -10,7 +10,7 @@ parser.add_argument('-s', dest='sem',help='manually set the semester info', defa
 parser.add_argument('-r',dest='series', help='whether their is a series among the subject (default = None)', default=None)
 parser.add_argument('--start', help='Starting date (default = 1)', default=1)
 parser.add_argument('--end', help='Ending date (default = 7)', default=7)
-parser.add_argument('-y', dest='year', default=smart_year(), help="currently only support the most recent year, achieve support may be added later")
+parser.add_argument('-y', dest='year', default=smart_year(), help="currently only support the most recent year, archive support may be added later")
 parser.add_argument('-g', dest='groupby', default='date', help="different groupby rules (default = date) option:[date, classtype]")
 
 args = parser.parse_args()
