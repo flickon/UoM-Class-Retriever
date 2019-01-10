@@ -6,8 +6,9 @@ this is a worked version of the class retriver
 - bs4
 
 ## how to use
-in bash/fish/zsh:
+```bash
 python3 main.py -h
+```
 for help message
 
 ## currently working on 
