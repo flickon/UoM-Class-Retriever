@@ -12,6 +12,7 @@ parser.add_argument('--start', help='Starting date (default = 1)', default=1)
 parser.add_argument('--end', help='Ending date (default = 7)', default=7)
 parser.add_argument('-y', dest='year', default=smart_year(), help="currently only support the most recent year, archive support may be added later")
 parser.add_argument('-g', dest='groupby', default='date', help="different groupby rules (default = date) option:[date, classtype]")
+parser.add_argument("--save", dest='dest', default='~/archive', help="save the seen timetable to ~/archive, you can specify your own location, pass 0 to disable")
 
 args = parser.parse_args()
 spyder = spyder.Spyder(args.codes[0], args.year, args.sem, args.series, args.start, args.end)
