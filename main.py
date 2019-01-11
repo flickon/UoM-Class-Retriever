@@ -15,5 +15,11 @@ parser.add_argument('-g', dest='groupby', default='date', help="different groupb
 parser.add_argument("--save", dest='dest', default='~/archive', help="save the seen timetable to ~/archive, you can specify your own location, pass 0 to disable")
 
 args = parser.parse_args()
-spyder = spyder.Spyder(args.codes[0], args.year, args.sem, args.series, args.start, args.end)
-spyder.get()
+
+# for c in args.codes:
+#     print("processing", c.upper())
+#     spyder = spyder.Spyder(c, args.year, args.sem, args.series, args.start, args.end)
+#     spyder.get()
+#     break
+
+print(args.__dict__.values())
